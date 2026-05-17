@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Trip | Tapro <em>Travels</em></title>
+  <meta name="description" content="Book your perfect Sri Lanka tour — choose your pickup, destination, dates and vehicle for instant pricing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&family=Turret+Road:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/booking-page.css">
+</head>
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="overlay" data-overlay></div>
+    <div class="header-top">
+      <div class="container">
+        <a href="tel:+94112345678" class="helpline-box">
+          <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div>
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquiries:</p>
+            <p class="helpline-number">+94  72 280 0251</p>
+          </div>
+        </a>
+        <a href="index.html" class="logo-link">
+          <span class="site-logo">Tapro <em>Travels</em></span>
+        </a>
+        <div class="header-btn-group">
+          <div class="currency-switcher">
+            <select class="currency-select" aria-label="Select currency">
+              <option value="USD">$ USD</option>
+              <option value="LKR">Rs LKR</option>
+              <option value="EUR">€ EUR</option>
+              <option value="GBP">£ GBP</option>
+              <option value="AUD">A$ AUD</option>
+              <option value="CAD">C$ CAD</option>
+              <option value="SGD">S$ SGD</option>
+              <option value="JPY">¥ JPY</option>
+              <option value="INR">₹ INR</option>
+            </select>
+          </div>
+          <button class="search-btn" aria-label="Search"><ion-icon name="search"></ion-icon></button>
+          <button class="admin-header-btn" data-admin-login aria-label="Admin Login"><ion-icon name="lock-closed-outline"></ion-icon></button>
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn><ion-icon name="menu-outline"></ion-icon></button>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container">
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <span class="site-logo site-logo-dark">Tapro <em>Travels</em></span>
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn><ion-icon name="close-outline"></ion-icon></button>
+          </div>
+          <ul class="navbar-list">
+            <li><a href="index.html"         class="navbar-link" data-nav-link>Home</a></li>
+            <li><a href="destinations.html"  class="navbar-link" data-nav-link>Destinations</a></li>
+            <li><a href="packages.html"      class="navbar-link" data-nav-link>Packages</a></li>
+            <li><a href="index.html#gallery" class="navbar-link" data-nav-link>Gallery</a></li>
+            <li><a href="index.html#contact" class="navbar-link" data-nav-link>Contact Us</a></li>
+          </ul>
+        </nav>
+        <a href="booking.html" class="btn btn-primary">Book Now</a>
+        <button class="admin-nav-btn" data-admin-login aria-label="Admin Login">
+          <ion-icon name="lock-closed-outline"></ion-icon> Admin
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- BOOKING HERO -->
+    <section class="bk-hero">
+      <div class="bk-hero-bg"></div>
+      <div class="bk-hero-overlay"></div>
+      <div class="container bk-hero-content">
+        <p class="section-subtitle">Plan Your Adventure</p>
+        <h1 class="bk-hero-title">Book Your Sri Lanka Trip</h1>
+        <p class="bk-hero-sub">Fill in your journey details below and get instant pricing & tailored packages.</p>
+      </div>
+    </section>
+
+    <!-- BOOKING FORM CARD -->
+    <section class="bk-form-section">
+      <div class="container">
+        <div class="bk-card">
+
+          <!-- Step indicator -->
+          <div class="bk-steps">
+            <div class="bk-step active" data-step="1">
+              <div class="bk-step-dot"><ion-icon name="navigate-outline"></ion-icon></div>
+              <span>Route</span>
+            </div>
+            <div class="bk-step-line"></div>
+            <div class="bk-step" data-step="2">
+              <div class="bk-step-dot"><ion-icon name="calendar-outline"></ion-icon></div>
+              <span>Dates & Guests</span>
+            </div>
+            <div class="bk-step-line"></div>
+            <div class="bk-step" data-step="3">
+              <div class="bk-step-dot"><ion-icon name="car-outline"></ion-icon></div>
+              <span>Vehicle</span>
+            </div>
+            <div class="bk-step-line"></div>
+            <div class="bk-step" data-step="4">
+              <div class="bk-step-dot"><ion-icon name="bed-outline"></ion-icon></div>
+              <span>Hotel</span>
+            </div>
+          </div>
+
+          <form id="bookingForm" novalidate>
+
+            <!-- ── STEP 1: Route ── -->
+            <div class="bk-step-panel active" id="panel-1">
+              <h2 class="bk-panel-title">Where are you going?</h2>
+
+              <div class="bk-route-row">
+                <!-- Pickup -->
+                <div class="bk-route-field">
+                  <label class="bk-label" for="bk-pickup">
+                    <ion-icon name="radio-button-on-outline"></ion-icon>
+                    Pickup Location
+                  </label>
+                  <div class="bk-select-wrap">
+                    <select name="pickup" id="bk-pickup" class="bk-select" required>
+                      <option value="" disabled selected>Select pickup point</option>
+                      <optgroup label="Airports">
+                        <option value="Bandaranaike Airport">Bandaranaike International Airport</option>
+                        <option value="Mattala Airport">Mattala Rajapaksa Airport</option>
+                      </optgroup>
+                      <optgroup label="West Coast">
+                        <option value="Colombo">Colombo City</option>
+                        <option value="Negombo">Negombo</option>
+                        <option value="Bentota">Bentota</option>
+                        <option value="Hikkaduwa">Hikkaduwa</option>
+                      </optgroup>
+                      <optgroup label="South Coast">
+                        <option value="Galle">Galle</option>
+                        <option value="Mirissa">Mirissa</option>
+                        <option value="Tangalle">Tangalle</option>
+                        <option value="Hambantota">Hambantota</option>
+                      </optgroup>
+                      <optgroup label="Hill Country">
+                        <option value="Kandy">Kandy</option>
+                        <option value="Nuwara Eliya">Nuwara Eliya</option>
+                        <option value="Ella">Ella</option>
+                      </optgroup>
+                      <optgroup label="Cultural Triangle">
+                        <option value="Sigiriya">Sigiriya</option>
+                        <option value="Anuradhapura">Anuradhapura</option>
+                        <option value="Polonnaruwa">Polonnaruwa</option>
+                      </optgroup>
+                      <optgroup label="East & North">
+                        <option value="Trincomalee">Trincomalee</option>
+                        <option value="Arugam Bay">Arugam Bay</option>
+                        <option value="Jaffna">Jaffna</option>
+                      </optgroup>
+                    </select>
+                    <ion-icon name="chevron-down-outline" class="bk-select-arrow"></ion-icon>
+                  </div>
+                </div>
+
+                <!-- Swap button -->
+                <button type="button" class="bk-swap-btn" id="swapBtn" title="Swap locations">
+                  <ion-icon name="swap-horizontal-outline"></ion-icon>
+                </button>
+
+                <!-- Destination -->
+                <div class="bk-route-field">
+                  <label class="bk-label" for="bk-dest">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Destination
+                  </label>
+                  <div class="bk-select-wrap">
+                    <select name="destination" id="bk-dest" class="bk-select" required>
+                      <option value="" disabled selected>Select destination</option>
+                      <optgroup label="West Coast">
+                        <option value="Colombo">Colombo</option>
+                        <option value="Negombo">Negombo</option>
+                        <option value="Bentota">Bentota</option>
+                        <option value="Hikkaduwa">Hikkaduwa</option>
+                      </optgroup>
+                      <optgroup label="South Coast">
+                        <option value="Galle">Galle</option>
+                        <option value="Mirissa">Mirissa</option>
+                        <option value="Tangalle">Tangalle</option>
+                        <option value="Yala">Yala</option>
+                      </optgroup>
+                      <optgroup label="Hill Country">
+                        <option value="Kandy">Kandy</option>
+                        <option value="Nuwara Eliya">Nuwara Eliya</option>
+                        <option value="Ella">Ella</option>
+                      </optgroup>
+                      <optgroup label="Cultural Triangle">
+                        <option value="Sigiriya">Sigiriya</option>
+                        <option value="Anuradhapura">Anuradhapura</option>
+                        <option value="Polonnaruwa">Polonnaruwa</option>
+                      </optgroup>
+                      <optgroup label="East & North">
+                        <option value="Trincomalee">Trincomalee</option>
+                        <option value="Arugam Bay">Arugam Bay</option>
+                        <option value="Pasikuda">Pasikuda</option>
+                        <option value="Jaffna">Jaffna</option>
+                      </optgroup>
+                    </select>
+                    <ion-icon name="chevron-down-outline" class="bk-select-arrow"></ion-icon>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Route preview strip -->
+              <div class="bk-route-preview" id="routePreview" style="display:none">
+                <span id="routeFrom" class="rp-loc"></span>
+                <div class="rp-line">
+                  <span class="rp-dot"></span>
+                  <span class="rp-dash"></span>
+                  <ion-icon name="airplane-outline" class="rp-plane"></ion-icon>
+                  <span class="rp-dash"></span>
+                  <span class="rp-dot"></span>
+                </div>
+                <span id="routeTo" class="rp-loc"></span>
+              </div>
+
+              <div class="bk-step-nav">
+                <span></span>
+                <button type="button" class="bk-btn-next" id="step1Next">
+                  Next: Dates & Guests <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── STEP 2: Dates & Guests ── -->
+            <div class="bk-step-panel" id="panel-2">
+              <h2 class="bk-panel-title">When are you travelling?</h2>
+
+              <div class="bk-dates-row">
+                <div class="bk-field-group">
+                  <label class="bk-label" for="bk-checkin">
+                    <ion-icon name="calendar-outline"></ion-icon> Check-in
+                  </label>
+                  <input type="date" id="bk-checkin" name="checkin" class="bk-input" required>
+                </div>
+                <div class="bk-nights-badge" id="nightsBadge" style="display:none">
+                  <ion-icon name="moon-outline"></ion-icon>
+                  <strong id="nightsCount">0</strong>
+                  <span>nights</span>
+                </div>
+                <div class="bk-field-group">
+                  <label class="bk-label" for="bk-checkout">
+                    <ion-icon name="calendar-outline"></ion-icon> Check-out
+                  </label>
+                  <input type="date" id="bk-checkout" name="checkout" class="bk-input" required>
+                </div>
+              </div>
+
+              <div class="bk-guests-row">
+                <label class="bk-label" for="bk-people">
+                  <ion-icon name="people-outline"></ion-icon> Number of Guests
+                </label>
+                <div class="bk-counter">
+                  <button type="button" class="bk-counter-btn" id="guestMinus">
+                    <ion-icon name="remove-outline"></ion-icon>
+                  </button>
+                  <div class="bk-counter-display">
+                    <span id="guestCount">2</span>
+                    <em>guests</em>
+                  </div>
+                  <button type="button" class="bk-counter-btn" id="guestPlus">
+                    <ion-icon name="add-outline"></ion-icon>
+                  </button>
+                </div>
+                <input type="hidden" name="people" id="bk-people" value="2">
+              </div>
+
+              <div class="bk-step-nav">
+                <button type="button" class="bk-btn-back" id="step2Back">
+                  <ion-icon name="arrow-back-outline"></ion-icon> Back
+                </button>
+                <button type="button" class="bk-btn-next" id="step2Next">
+                  Next: Choose Vehicle <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── STEP 3: Vehicle ── -->
+            <div class="bk-step-panel" id="panel-3">
+              <h2 class="bk-panel-title">How do you want to travel?</h2>
+
+              <div class="bk-vehicle-grid">
+                <label class="bk-vehicle-card" data-vehicle="car">
+                  <input type="radio" name="vehicle" value="car">
+                  <div class="bk-vehicle-inner">
+                    <div class="bk-vehicle-icon">
+                      <ion-icon name="car-sport-outline"></ion-icon>
+                    </div>
+                    <div class="bk-vehicle-info">
+                      <strong>Car</strong>
+                      <em>Up to 4 guests</em>
+                      <span class="bk-vehicle-rate">$45/day</span>
+                    </div>
+                    <div class="bk-vehicle-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                  </div>
+                </label>
+
+                <label class="bk-vehicle-card" data-vehicle="van">
+                  <input type="radio" name="vehicle" value="van">
+                  <div class="bk-vehicle-inner">
+                    <div class="bk-vehicle-icon">
+                      <ion-icon name="bus-outline"></ion-icon>
+                    </div>
+                    <div class="bk-vehicle-info">
+                      <strong>Van</strong>
+                      <em>Up to 8 guests</em>
+                      <span class="bk-vehicle-rate">$65/day</span>
+                    </div>
+                    <div class="bk-vehicle-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                  </div>
+                </label>
+
+                <label class="bk-vehicle-card" data-vehicle="tuk">
+                  <input type="radio" name="vehicle" value="tuk">
+                  <div class="bk-vehicle-inner">
+                    <div class="bk-vehicle-icon">
+                      <ion-icon name="flash-outline"></ion-icon>
+                    </div>
+                    <div class="bk-vehicle-info">
+                      <strong>Tuk-Tuk</strong>
+                      <em>Up to 3 guests</em>
+                      <span class="bk-vehicle-rate">$25/day</span>
+                    </div>
+                    <div class="bk-vehicle-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                  </div>
+                </label>
+
+                <label class="bk-vehicle-card" data-vehicle="bike">
+                  <input type="radio" name="vehicle" value="bike">
+                  <div class="bk-vehicle-inner">
+                    <div class="bk-vehicle-icon">
+                      <ion-icon name="bicycle-outline"></ion-icon>
+                    </div>
+                    <div class="bk-vehicle-info">
+                      <strong>Bike</strong>
+                      <em>Up to 2 guests</em>
+                      <span class="bk-vehicle-rate">$20/day</span>
+                    </div>
+                    <div class="bk-vehicle-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Live price bar -->
+              <div class="bk-price-bar" id="livePriceBar" style="display:none">
+                <div class="bk-price-bar-left">
+                  <p class="bk-price-bar-label">Estimated Transport Cost</p>
+                  <p class="bk-price-bar-note" id="livePriceNote">—</p>
+                </div>
+                <div class="bk-price-bar-right">
+                  <p class="bk-price-bar-total" id="livePriceTotal">$0</p>
+                  <p class="bk-price-bar-tax">incl. 10% tax</p>
+                </div>
+              </div>
+
+              <div class="bk-step-nav">
+                <button type="button" class="bk-btn-back" id="step3Back">
+                  <ion-icon name="arrow-back-outline"></ion-icon> Back
+                </button>
+                <button type="button" class="bk-btn-next" id="step3Next">
+                  Next: Hotel <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── STEP 4: Hotel ── -->
+            <div class="bk-step-panel" id="panel-4">
+              <h2 class="bk-panel-title">What type of hotel do you prefer?</h2>
+              <p class="bk-panel-sub">Choose your accommodation standard — we'll match packages and estimate costs accordingly.</p>
+
+              <div class="bk-hotel-grid">
+
+                <label class="bk-hotel-card" data-hotel="guesthouse">
+                  <input type="radio" name="hotel" value="guesthouse">
+                  <div class="bk-hotel-inner">
+                    <div class="bk-hotel-stars">
+                      <ion-icon name="home-outline"></ion-icon>
+                    </div>
+                    <div class="bk-hotel-info">
+                      <strong>Guesthouse / Homestay</strong>
+                      <em>Local, authentic experience</em>
+                      <span class="bk-hotel-rate">~$20 / person / night</span>
+                    </div>
+                    <div class="bk-hotel-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                  </div>
+                </label>
+
+                <label class="bk-hotel-card" data-hotel="3star">
+                  <input type="radio" name="hotel" value="3star">
+                  <div class="bk-hotel-inner">
+                    <div class="bk-hotel-stars">
+                      <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    </div>
+                    <div class="bk-hotel-info">
+                      <strong>3 Star Hotel</strong>
+                      <em>Comfortable, good value</em>
+                      <span class="bk-hotel-rate">~$40 / person / night</span>
+                    </div>
+                    <div class="bk-hotel-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                  </div>
+                </label>
+
+                <label class="bk-hotel-card" data-hotel="4star">
+                  <input type="radio" name="hotel" value="4star">
+                  <div class="bk-hotel-inner">
+                    <div class="bk-hotel-stars">
+                      <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    </div>
+                    <div class="bk-hotel-info">
+                      <strong>4 Star Hotel</strong>
+                      <em>Superior comfort & amenities</em>
+                      <span class="bk-hotel-rate">~$80 / person / night</span>
+                    </div>
+                    <div class="bk-hotel-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                  </div>
+                </label>
+
+                <label class="bk-hotel-card" data-hotel="5star">
+                  <input type="radio" name="hotel" value="5star">
+                  <div class="bk-hotel-inner">
+                    <div class="bk-hotel-stars">
+                      <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    </div>
+                    <div class="bk-hotel-info">
+                      <strong>5 Star Hotel</strong>
+                      <em>Luxury stay, premium service</em>
+                      <span class="bk-hotel-rate">~$150 / person / night</span>
+                    </div>
+                    <div class="bk-hotel-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                  </div>
+                </label>
+
+                <label class="bk-hotel-card bk-hotel-card--none" data-hotel="none">
+                  <input type="radio" name="hotel" value="none">
+                  <div class="bk-hotel-inner">
+                    <div class="bk-hotel-stars">
+                      <ion-icon name="car-outline"></ion-icon>
+                    </div>
+                    <div class="bk-hotel-info">
+                      <strong>No Accommodation</strong>
+                      <em>Transport only, I'll arrange my own</em>
+                      <span class="bk-hotel-rate">Transport cost only</span>
+                    </div>
+                    <div class="bk-hotel-check"><ion-icon name="checkmark-circle"></ion-icon></div>
+                  </div>
+                </label>
+
+              </div>
+
+              <!-- Hotel cost estimate bar -->
+              <div class="bk-price-bar bk-hotel-bar" id="hotelPriceBar" style="display:none">
+                <div class="bk-price-bar-left">
+                  <p class="bk-price-bar-label">Estimated Accommodation Cost</p>
+                  <p class="bk-price-bar-note" id="hotelPriceNote">—</p>
+                </div>
+                <div class="bk-price-bar-right">
+                  <p class="bk-price-bar-total" id="hotelPriceTotal">$0</p>
+                  <p class="bk-price-bar-tax">excl. taxes</p>
+                </div>
+              </div>
+
+              <div class="bk-step-nav">
+                <button type="button" class="bk-btn-back" id="step4Back">
+                  <ion-icon name="arrow-back-outline"></ion-icon> Back
+                </button>
+                <button type="submit" class="bk-btn-search" id="searchBtn">
+                  <ion-icon name="search-outline"></ion-icon>
+                  Search Packages
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS SECTION -->
+    <section class="bk-results-section" id="resultsSection" style="display:none">
+      <div class="container">
+        <div id="resultsInner"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link">
+            <span class="site-logo site-logo-footer">Tapro <em>Travels</em></span>
+          </a>
+          <p class="footer-text">Your gateway to the wonders of Sri Lanka — where every journey becomes a cherished memory.</p>
+        </div>
+        <div class="footer-contact">
+          <h4 class="contact-title">Contact Us</h4>
+          <p class="contact-text">We'd love to help plan your Sri Lanka adventure!</p>
+          <ul>
+            <li class="contact-item"><ion-icon name="call-outline"></ion-icon><a href="tel:+94112345678" class="contact-link">+94  72 280 0251</a></li>
+            <li class="contact-item"><ion-icon name="mail-outline"></ion-icon><a href="mailto:info@trulysrilanka.com" class="contact-link">info@trulysrilanka.com</a></li>
+            <li class="contact-item"><ion-icon name="location-outline"></ion-icon><address>No. 76, Galle Road, Colombo 03, Sri Lanka</address></li>
+          </ul>
+        </div>
+        <div class="footer-form">
+          <p class="form-text">Subscribe for travel tips, deals &amp; Sri Lanka insights!</p>
+          <form action="#" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2026 <a href="#">Tapro <em>Travels</em></a>. All rights reserved.</p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-bottom-link">Terms &amp; Conditions</a></li>
+          <li><a href="#" class="footer-bottom-link">FAQ</a></li>
+          <li><button class="admin-portal-link" data-admin-login>Admin Portal</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+  <script type="module" src="/src/booking-page.js"></script>
+  <script type="module" src="/src/animations.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

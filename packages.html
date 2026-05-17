@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Packages | Tapro <em>Travels</em></title>
+  <meta name="description" content="Explore our handcrafted Sri Lanka tour packages — cultural tours, beach escapes, wildlife safaris, hill country retreats and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&family=Turret+Road:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+        <a href="tel:+94112345678" class="helpline-box">
+          <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div>
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquiries:</p>
+            <p class="helpline-number">+94  72 280 0251</p>
+          </div>
+        </a>
+        <a href="index.html" class="logo-link">
+          <span class="site-logo">Tapro <em>Travels</em></span>
+        </a>
+        <div class="header-btn-group">
+          <div class="currency-switcher">
+            <select class="currency-select" aria-label="Select currency">
+              <option value="USD">$ USD</option>
+              <option value="LKR">Rs LKR</option>
+              <option value="EUR">€ EUR</option>
+              <option value="GBP">£ GBP</option>
+              <option value="AUD">A$ AUD</option>
+              <option value="CAD">C$ CAD</option>
+              <option value="SGD">S$ SGD</option>
+              <option value="JPY">¥ JPY</option>
+              <option value="INR">₹ INR</option>
+            </select>
+          </div>
+          <button class="search-btn" aria-label="Search"><ion-icon name="search"></ion-icon></button>
+          <button class="admin-header-btn" data-admin-login aria-label="Admin Login"><ion-icon name="lock-closed-outline"></ion-icon></button>
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn><ion-icon name="menu-outline"></ion-icon></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <span class="site-logo site-logo-dark">Tapro <em>Travels</em></span>
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn><ion-icon name="close-outline"></ion-icon></button>
+          </div>
+          <ul class="navbar-list">
+            <li><a href="index.html"        class="navbar-link" data-nav-link>Home</a></li>
+            <li><a href="destinations.html" class="navbar-link" data-nav-link>Destinations</a></li>
+            <li><a href="packages.html"     class="navbar-link" data-nav-link>Packages</a></li>
+            <li><a href="index.html#gallery" class="navbar-link" data-nav-link>Gallery</a></li>
+            <li><a href="index.html#contact" class="navbar-link" data-nav-link>Contact Us</a></li>
+          </ul>
+        </nav>
+        <button class="btn btn-primary">Book Now</button>
+        <button class="admin-nav-btn" data-admin-login aria-label="Admin Login">
+          <ion-icon name="lock-closed-outline"></ion-icon> Admin
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-subtitle">Tailored For You</p>
+        <h1 class="page-hero-title">Tour Packages</h1>
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Packages</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- FILTER -->
+    <section class="filter-section">
+      <div class="container">
+        <ul class="filter-list">
+          <li><button class="filter-btn active" data-filter="all">All Packages</button></li>
+          <li><button class="filter-btn" data-filter="cultural">Cultural</button></li>
+          <li><button class="filter-btn" data-filter="beach">Beach</button></li>
+          <li><button class="filter-btn" data-filter="wildlife">Wildlife</button></li>
+          <li><button class="filter-btn" data-filter="adventure">Adventure</button></li>
+          <li><button class="filter-btn" data-filter="luxury">Luxury</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PACKAGES LIST -->
+    <section class="pkg-all-section">
+      <div class="container">
+        <ul class="package-list" id="pkgList">
+
+          <!-- 1 -->
+          <li class="pkg-item" data-category="cultural">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/anuradhapura-hm-feat.jpg" alt="Cultural Triangle Tour" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3 card-title">Cultural Triangle Discovery Tour</h3>
+                <p class="card-text">Explore Sigiriya, Polonnaruwa and Anuradhapura — the ancient kingdoms of Sri Lanka — on this immersive journey through centuries of history and Buddhist heritage.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">7D / 6N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 12</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">North Central</p></div></li>
+                </ul>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(38 Reviews)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="899" data-base-currency="USD" data-price-unit="/per person">$899 <span>/per person</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 2 -->
+          <li class="pkg-item" data-category="beach wildlife">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/hikka-hm-feat.jpg" alt="Beach & Wildlife Safari" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3 card-title">Beach & Wildlife Safari Adventure</h3>
+                <p class="card-text">Yala's thrilling leopard safaris by day, whale watching off Mirissa's coast, and relaxing on golden beaches. The ultimate south Sri Lanka experience.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">8D / 7N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 10</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">South Sri Lanka</p></div></li>
+                </ul>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(52 Reviews)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="1199" data-base-currency="USD" data-price-unit="/per person">$1,199 <span>/per person</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 3 -->
+          <li class="pkg-item" data-category="adventure">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-2.jpg" alt="Hill Country Escape" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3 card-title">Hill Country & Tea Estates Escape</h3>
+                <p class="card-text">Misty mountains, emerald tea plantations, and the world's most scenic train ride from Kandy through Nuwara Eliya to Ella. Nature and culture at their finest.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">5D / 4N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 8</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">Central Hills</p></div></li>
+                </ul>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(29 Reviews)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="749" data-base-currency="USD" data-price-unit="/per person">$749 <span>/per person</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 4 -->
+          <li class="pkg-item" data-category="luxury beach">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/bentota-hm-feat.jpg" alt="Luxury West Coast Retreat" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3 card-title">Luxury West Coast Beach Retreat</h3>
+                <p class="card-text">Five-star resorts along Bentota and Hikkaduwa, Ayurveda spa treatments, private boat rides on the Bentota River, and sunset cocktails on pristine white sand beaches.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">6D / 5N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 6</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">West Coast</p></div></li>
+                </ul>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(21 Reviews)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="1650" data-base-currency="USD" data-price-unit="/per person">$1,650 <span>/per person</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 5 -->
+          <li class="pkg-item" data-category="cultural wildlife">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-3.jpg" alt="Grand Sri Lanka Circuit" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3 card-title">Grand Sri Lanka Circuit</h3>
+                <p class="card-text">The ultimate island tour — from Colombo through the Cultural Triangle, up to Jaffna, across to Trincomalee, down the east coast to Arugam Bay, and finishing along the south coast.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">14D / 13N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 10</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">Island-wide</p></div></li>
+                </ul>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(44 Reviews)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="2450" data-base-currency="USD" data-price-unit="/per person">$2,450 <span>/per person</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 6 -->
+          <li class="pkg-item" data-category="adventure beach">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/arugambay.jpg" alt="East Coast Surf & Sun" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3 card-title">East Coast Surf & Sun Escape</h3>
+                <p class="card-text">Catch world-class waves at Arugam Bay, snorkel in the crystal-clear shallow bay of Pasikuda, and explore the natural harbour of Trincomalee on this sun-soaked east coast adventure.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">7D / 6N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 8</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">East Coast</p></div></li>
+                </ul>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(33 Reviews)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="990" data-base-currency="USD" data-price-unit="/per person">$990 <span>/per person</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 7 -->
+          <li class="pkg-item" data-category="cultural">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/jaffna-hm-feat.jpg" alt="Jaffna Cultural Immersion" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3 card-title">Jaffna Cultural Immersion</h3>
+                <p class="card-text">Discover the rich Tamil heritage of Sri Lanka's north — iconic Hindu kovils, the Dutch colonial fort, island hopping in the Jaffna lagoon, and unique local cuisine unlike anywhere else.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">4D / 3N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 10</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">North Sri Lanka</p></div></li>
+                </ul>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(18 Reviews)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="620" data-base-currency="USD" data-price-unit="/per person">$620 <span>/per person</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 8 -->
+          <li class="pkg-item" data-category="luxury wildlife">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-4.jpg" alt="Luxury Yala Safari Lodge" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3 card-title">Luxury Yala Safari Lodge Experience</h3>
+                <p class="card-text">Stay in an exclusive tented safari lodge within Yala's borders. Private game drives at dawn and dusk, gourmet bush dinners under the stars, and expert naturalist guides.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">4D / 3N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 6</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">Yala, South</p></div></li>
+                </ul>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(27 Reviews)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="1850" data-base-currency="USD" data-price-unit="/per person">$1,850 <span>/per person</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 9 -->
+          <li class="pkg-item" data-category="luxury cultural">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/kandy.jpg" alt="Kandy Heritage & Wellness" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <h3 class="h3 card-title">Kandy Heritage & Wellness Retreat</h3>
+                <p class="card-text">Stay in a colonial-era hill villa in Kandy. Visit the Temple of the Tooth, attend a traditional Kandyan dance show, and unwind with daily Ayurveda treatments and meditation sessions.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">5D / 4N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 8</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">Kandy, Central</p></div></li>
+                </ul>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(35 Reviews)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="1100" data-base-currency="USD" data-price-unit="/per person">$1,100 <span>/per person</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 10 -->
+          <li class="pkg-item" data-category="cultural adventure">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-2.jpg" alt="3 Days Classic Sri Lanka Tour" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <span class="card-badge">New</span>
+                <h3 class="h3 card-title">3 Days Classic Sri Lanka Tour</h3>
+                <p class="card-text">Airport pickup to Sigiriya Rock Fortress, on to Kandy's Temple of the Tooth, through misty tea country to Ella's iconic Nine Arch Bridge, and back to Colombo. Private car with driver, hotel, breakfast & dinner included.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">3D / 2N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 4</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">Colombo → Kandy → Ella</p></div></li>
+                </ul>
+                <div class="card-itinerary">
+                  <p class="itinerary-label">Itinerary Highlights</p>
+                  <ul class="itinerary-list">
+                    <li><span>Day 1</span> Airport → Sigiriya Rock Fortress → Kandy</li>
+                    <li><span>Day 2</span> Temple of the Tooth → Tea Country → Nuwara Eliya → Ella</li>
+                    <li><span>Day 3</span> Little Adam's Peak → Ravana Falls → Colombo</li>
+                  </ul>
+                  <div class="card-includes">
+                    <p class="includes-title">Includes:</p>
+                    <p class="includes-text">Private transport · Hotel · Breakfast & Dinner · Fuel & Parking · Guided sightseeing</p>
+                  </div>
+                  <div class="card-addons">
+                    <p class="includes-title">Optional Add-ons:</p>
+                    <p class="includes-text">Train tickets to Ella · Jeep safari · Professional photography · Honeymoon decoration</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(New Package)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="60000" data-base-currency="LKR" data-price-unit="/per vehicle">LKR 60,000 <span>/per vehicle</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+          <!-- 11 -->
+          <li class="pkg-item" data-category="beach adventure">
+            <div class="package-card">
+              <figure class="card-banner">
+                <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/bentota-hm-feat.jpg" alt="3 Days South Coast Relax Tour" loading="lazy">
+              </figure>
+              <div class="card-content">
+                <span class="card-badge">New</span>
+                <h3 class="h3 card-title">3 Days South Coast Relax Tour</h3>
+                <p class="card-text">Colombo to Bentota's river lagoon, the Dutch-colonial Galle Fort, Mirissa's whale-watching bay and golden beach, finishing at Hikkaduwa's coral reef. Full coastal escape with private car transport included.</p>
+                <ul class="card-meta-list">
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="time"></ion-icon><p class="text">3D / 2N</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="people"></ion-icon><p class="text">Max: 4</p></div></li>
+                  <li class="card-meta-item"><div class="meta-box"><ion-icon name="location"></ion-icon><p class="text">Colombo → Galle → Mirissa</p></div></li>
+                </ul>
+                <div class="card-itinerary">
+                  <p class="itinerary-label">Itinerary Highlights</p>
+                  <ul class="itinerary-list">
+                    <li><span>Day 1</span> Airport → Bentota → Galle Fort → Mirissa Beach</li>
+                    <li><span>Day 2</span> Whale Watching (optional) → Free Beach Day → Sunset Chill</li>
+                    <li><span>Day 3</span> Hikkaduwa Coral Reef → Colombo City Tour → Drop-off</li>
+                  </ul>
+                  <div class="card-includes">
+                    <p class="includes-title">Includes:</p>
+                    <p class="includes-text">Private transport · Hotel · Breakfast & Dinner · Fuel & Parking · Pickup/Drop-off</p>
+                  </div>
+                  <div class="card-addons">
+                    <p class="includes-title">Optional Add-ons:</p>
+                    <p class="includes-text">Whale watching boat · Surfing lessons · Snorkeling · Spa & massage</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-price">
+                <div class="wrapper">
+                  <p class="reviews">(New Package)</p>
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                  </div>
+                </div>
+                <p class="price" data-base-price="40000" data-base-currency="LKR" data-price-unit="/per vehicle">LKR 40,000 <span>/per vehicle</span></p>
+                <button class="btn btn-secondary">Book Now</button>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+        <p class="dest-no-results" id="noResults" style="display:none;">No packages found for this category.</p>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-content">
+          <p class="section-subtitle">Can't find what you need?</p>
+          <h2 class="h2 section-title">Build Your Own Custom Package!</h2>
+          <p class="section-text">Tell us your dream Sri Lanka trip and our travel experts will craft a bespoke itinerary just for you — any duration, any budget.</p>
+        </div>
+        <button class="btn btn-secondary">Contact Us</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link">
+            <span class="site-logo site-logo-footer">Tapro <em>Travels</em></span>
+          </a>
+          <p class="footer-text">Your gateway to the wonders of Sri Lanka — where every journey becomes a cherished memory.</p>
+        </div>
+        <div class="footer-contact">
+          <h4 class="contact-title">Contact Us</h4>
+          <p class="contact-text">We'd love to help plan your Sri Lanka adventure!</p>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+94112345678" class="contact-link">+94  72 280 0251</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:info@trulysrilanka.com" class="contact-link">info@trulysrilanka.com</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>No. 76, Galle Road, Colombo 03, Sri Lanka</address>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-form">
+          <p class="form-text">Subscribe for travel tips, deals &amp; Sri Lanka insights!</p>
+          <form action="#" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2026 <a href="index.html">Tapro <em>Travels</em></a>. All rights reserved.</p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-bottom-link">Terms &amp; Conditions</a></li>
+          <li><a href="#" class="footer-bottom-link">FAQ</a></li>
+          <li><button class="admin-portal-link" data-admin-login>Admin Portal</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+  <script type="module" src="/src/packages.js"></script>
+  <script type="module" src="/src/animations.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

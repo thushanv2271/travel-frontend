@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Destinations | Tapro <em>Travels</em></title>
+  <meta name="description" content="Explore all Sri Lanka destinations — from ancient kingdoms and misty highlands to pristine beaches and wildlife safaris.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&family=Turret+Road:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+        <a href="tel:+94112345678" class="helpline-box">
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquiries:</p>
+            <p class="helpline-number">+94  72 280 0251</p>
+          </div>
+        </a>
+
+        <a href="index.html" class="logo-link">
+          <span class="site-logo">Tapro <em>Travels</em></span>
+        </a>
+
+        <div class="header-btn-group">
+          <div class="currency-switcher">
+            <select class="currency-select" aria-label="Select currency">
+              <option value="USD">$ USD</option>
+              <option value="LKR">Rs LKR</option>
+              <option value="EUR">€ EUR</option>
+              <option value="GBP">£ GBP</option>
+              <option value="AUD">A$ AUD</option>
+              <option value="CAD">C$ CAD</option>
+              <option value="SGD">S$ SGD</option>
+              <option value="JPY">¥ JPY</option>
+              <option value="INR">₹ INR</option>
+            </select>
+          </div>
+          <button class="search-btn" aria-label="Search">
+            <ion-icon name="search"></ion-icon>
+          </button>
+          <button class="admin-header-btn" data-admin-login aria-label="Admin Login">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+          </button>
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <span class="site-logo site-logo-dark">Tapro <em>Travels</em></span>
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+          <ul class="navbar-list">
+            <li><a href="index.html"              class="navbar-link" data-nav-link>Home</a></li>
+            <li><a href="destinations.html"        class="navbar-link" data-nav-link>Destinations</a></li>
+            <li><a href="index.html#package"       class="navbar-link" data-nav-link>Packages</a></li>
+            <li><a href="index.html#gallery"       class="navbar-link" data-nav-link>Gallery</a></li>
+            <li><a href="index.html#contact"       class="navbar-link" data-nav-link>Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <button class="btn btn-primary">Book Now</button>
+        <button class="admin-nav-btn" data-admin-login aria-label="Admin Login">
+          <ion-icon name="lock-closed-outline"></ion-icon> Admin
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-subtitle">Explore the Island</p>
+        <h1 class="page-hero-title">All Destinations</h1>
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Destinations</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- FILTER -->
+    <section class="filter-section">
+      <div class="container">
+        <ul class="filter-list">
+          <li><button class="filter-btn active" data-filter="all">All Regions</button></li>
+          <li><button class="filter-btn" data-filter="west">West Coast</button></li>
+          <li><button class="filter-btn" data-filter="south">South</button></li>
+          <li><button class="filter-btn" data-filter="east">East Coast</button></li>
+          <li><button class="filter-btn" data-filter="north">North</button></li>
+          <li><button class="filter-btn" data-filter="central">Central & Hills</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS GRID -->
+    <section class="dest-all-section">
+      <div class="container">
+
+        <div class="dest-grid" id="destGrid">
+
+          <!-- COLOMBO -->
+          <div class="dest-card" data-region="west">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/colombo.jpg" alt="Colombo" loading="lazy">
+              <span class="dest-region-badge">West Coast</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Colombo</h3>
+              <p class="dest-card-subtitle">The Commercial Capital</p>
+              <p class="dest-card-text">A vibrant city where high-rise buildings meet colonial charm. World-class malls, rooftop restaurants, Galle Face promenade, and a buzzing nightlife make Colombo the island's dynamic gateway.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- NEGOMBO -->
+          <div class="dest-card" data-region="west">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-6.jpg" alt="Negombo" loading="lazy">
+              <span class="dest-region-badge">West Coast</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Negombo</h3>
+              <p class="dest-card-subtitle">The Fishing Town Gateway</p>
+              <p class="dest-card-text">A laid-back coastal town just minutes from the airport, famous for its colourful fishing boats, Dutch canals, seafood, and long sandy beaches ideal for a first or last-night stay.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- BENTOTA -->
+          <div class="dest-card" data-region="west">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/bentota-hm-feat.jpg" alt="Bentota" loading="lazy">
+              <span class="dest-region-badge">West Coast</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Bentota</h3>
+              <p class="dest-card-subtitle">A Charming Coastal Retreat</p>
+              <p class="dest-card-text">Where the Bentota River meets the Indian Ocean. A serene resort town with water sports, Ayurveda spas, turtle hatcheries, and the tranquil Brief Garden designed by Bevis Bawa.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- GALLE -->
+          <div class="dest-card" data-region="south">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/galle-hm-feat.jpg" alt="Galle" loading="lazy">
+              <span class="dest-region-badge">South</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Galle</h3>
+              <p class="dest-card-subtitle">Colonial Fort City</p>
+              <p class="dest-card-text">A UNESCO World Heritage site where Dutch colonial bastions overlook the Indian Ocean. Cobblestone streets, boutique cafés, lighthouse sunsets, and centuries of layered history await.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- HIKKADUWA -->
+          <div class="dest-card" data-region="south">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/hikka-hm-feat.jpg" alt="Hikkaduwa" loading="lazy">
+              <span class="dest-region-badge">South</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Hikkaduwa</h3>
+              <p class="dest-card-subtitle">Coral Reefs & Surf Breaks</p>
+              <p class="dest-card-text">Sri Lanka's surf capital on the south-west coast. Crystal-clear waters over living coral reefs, vibrant beach bars, glass-bottom boat rides, and a lively backpacker scene.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- MIRISSA -->
+          <div class="dest-card" data-region="south">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-5.jpg" alt="Mirissa" loading="lazy">
+              <span class="dest-region-badge">South</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Mirissa</h3>
+              <p class="dest-card-subtitle">Whale Watching Capital</p>
+              <p class="dest-card-text">Home to the world's greatest blue whale watching experience. A crescent-shaped bay with calm turquoise waters, coconut-fringed beaches, and spectacular seafood shacks at sunset.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- TANGALLE -->
+          <div class="dest-card" data-region="south">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-4.jpg" alt="Tangalle" loading="lazy">
+              <span class="dest-region-badge">South</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Tangalle</h3>
+              <p class="dest-card-subtitle">Unspoiled Southern Coast</p>
+              <p class="dest-card-text">One of Sri Lanka's most beautiful and unspoiled stretches of coastline. Leatherback turtle nesting beaches, quiet lagoons, and boutique eco-resorts set among tropical gardens.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- YALA -->
+          <div class="dest-card" data-region="south">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-3.jpg" alt="Yala" loading="lazy">
+              <span class="dest-region-badge">South</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Yala</h3>
+              <p class="dest-card-subtitle">Wildlife Safari Paradise</p>
+              <p class="dest-card-text">Sri Lanka's most visited national park, boasting the world's highest density of wild leopards. Spot elephants, sloth bears, crocodiles, and hundreds of bird species on thrilling game drives.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- ARUGAM BAY -->
+          <div class="dest-card" data-region="east">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/arugambay.jpg" alt="Arugam Bay" loading="lazy">
+              <span class="dest-region-badge">East Coast</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Arugam Bay</h3>
+              <p class="dest-card-subtitle">Sri Lanka's Surf Capital</p>
+              <p class="dest-card-text">Rated among the world's top ten surf spots, Arugam Bay draws wave-riders from across the globe. Laid-back beach shacks, elephant sightings at dusk, and a bohemian traveller vibe.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- PASIKUDA -->
+          <div class="dest-card" data-region="east">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-2.jpg" alt="Pasikuda" loading="lazy">
+              <span class="dest-region-badge">East Coast</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Pasikuda</h3>
+              <p class="dest-card-subtitle">Crystal-Clear Shallow Waters</p>
+              <p class="dest-card-text">Famous for its exceptionally calm, shallow bay stretching nearly a kilometre out to sea. Powder-white sand, turquoise water, and luxury beach resorts make Pasikuda a true hidden gem.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- TRINCOMALEE -->
+          <div class="dest-card" data-region="east">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-1.jpg" alt="Trincomalee" loading="lazy">
+              <span class="dest-region-badge">East Coast</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Trincomalee</h3>
+              <p class="dest-card-subtitle">Natural Harbour & Hot Springs</p>
+              <p class="dest-card-text">One of the world's finest natural deep-water harbours. Stunning Nilaveli beach, the sacred Koneswaram Hindu temple on a cliff top, and natural hot springs at Kanniyai nearby.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- JAFFNA -->
+          <div class="dest-card" data-region="north">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/jaffna-hm-feat.jpg" alt="Jaffna" loading="lazy">
+              <span class="dest-region-badge">North</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Jaffna</h3>
+              <p class="dest-card-subtitle">Rich Tamil Culture & Heritage</p>
+              <p class="dest-card-text">Sri Lanka's cultural capital of the north — vibrant Hindu kovils, a magnificent Dutch colonial fort, palm-fringed islands, and a unique cuisine that differs entirely from the rest of the island.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- ANURADHAPURA -->
+          <div class="dest-card" data-region="north">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/anuradhapura-hm-feat.jpg" alt="Anuradhapura" loading="lazy">
+              <span class="dest-region-badge">North</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Anuradhapura</h3>
+              <p class="dest-card-subtitle">Ancient Buddhist Kingdom</p>
+              <p class="dest-card-text">A UNESCO World Heritage city and one of Asia's oldest civilisations. Colossal dagobas rising above the jungle, the sacred Sri Maha Bodhi tree grown from the Buddha's own fig tree, and ancient reservoirs.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- KANDY -->
+          <div class="dest-card" data-region="central">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/kandy.jpg" alt="Kandy" loading="lazy">
+              <span class="dest-region-badge">Central</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Kandy</h3>
+              <p class="dest-card-subtitle">Cultural Capital of Sri Lanka</p>
+              <p class="dest-card-text">The last royal capital of Sri Lanka, set around a beautiful lake surrounded by misty hills. The Temple of the Tooth Relic, the Royal Botanical Gardens, and vibrant Kandyan dance performances await.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- SIGIRIYA -->
+          <div class="dest-card" data-region="central">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/sigiriya.jpg" alt="Sigiriya" loading="lazy">
+              <span class="dest-region-badge">Central</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Sigiriya</h3>
+              <p class="dest-card-subtitle">The Lion Rock Fortress</p>
+              <p class="dest-card-text">One of the eight UNESCO World Heritage Sites in Sri Lanka. A 5th-century royal citadel perched atop a 200-metre volcanic rock, adorned with remarkable frescoes and mirror-wall inscriptions.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- POLONNARUWA -->
+          <div class="dest-card" data-region="central">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-welcome.jpg" alt="Polonnaruwa" loading="lazy">
+              <span class="dest-region-badge">Central</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Polonnaruwa</h3>
+              <p class="dest-card-subtitle">The Medieval Capital</p>
+              <p class="dest-card-text">Sri Lanka's second ancient capital and a UNESCO World Heritage city. Majestic ruins of palaces, temples, and colossal Buddha statues at Gal Vihara, set against vast man-made lakes.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- ELLA -->
+          <div class="dest-card" data-region="central">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-2.jpg" alt="Ella" loading="lazy">
+              <span class="dest-region-badge">Central Hills</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Ella</h3>
+              <p class="dest-card-subtitle">Mountain Village Paradise</p>
+              <p class="dest-card-text">A breathtaking mountain village perched at 1,000 metres with sweeping valley views. Hike to Little Adam's Peak, walk the Nine Arches Bridge, and arrive in style on the iconic Kandy–Ella train.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- NUWARA ELIYA -->
+          <div class="dest-card" data-region="central">
+            <figure class="dest-card-img">
+              <img src="https://djpadb6zmchmi.cloudfront.net/2025/10/truly-srilanka-banner-3.jpg" alt="Nuwara Eliya" loading="lazy">
+              <span class="dest-region-badge">Central Hills</span>
+            </figure>
+            <div class="dest-card-body">
+              <div class="dest-card-rating">
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <h3 class="dest-card-name">Nuwara Eliya</h3>
+              <p class="dest-card-subtitle">Little England of Sri Lanka</p>
+              <p class="dest-card-text">At 1,868 metres above sea level, Sri Lanka's coolest city. Rolling emerald tea estates, colonial bungalows, rose gardens, trout fishing, and a colonial-era golf course wrapped in perpetual mist.</p>
+              <a href="index.html#contact" class="btn btn-primary dest-card-btn">Enquire Now</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- end .dest-grid -->
+
+        <p class="dest-no-results" id="noResults" style="display:none;">No destinations found for this region.</p>
+
+      </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-content">
+          <p class="section-subtitle">Ready to explore?</p>
+          <h2 class="h2 section-title">Plan Your Sri Lanka Adventure!</h2>
+          <p class="section-text">Our travel experts are ready to craft the perfect itinerary for you — tailored to your interests, budget, and timeline.</p>
+        </div>
+        <button class="btn btn-secondary">Contact Us</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link">
+            <span class="site-logo site-logo-footer">Tapro <em>Travels</em></span>
+          </a>
+          <p class="footer-text">Your gateway to the wonders of Sri Lanka — where every journey becomes a cherished memory.</p>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="contact-title">Contact Us</h4>
+          <p class="contact-text">We'd love to help plan your Sri Lanka adventure!</p>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+94112345678" class="contact-link">+94  72 280 0251</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:info@trulysrilanka.com" class="contact-link">info@trulysrilanka.com</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>No. 76, Galle Road, Colombo 03, Sri Lanka</address>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-form">
+          <p class="form-text">Subscribe for travel tips, deals &amp; Sri Lanka insights!</p>
+          <form action="#" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2026 <a href="index.html">Tapro <em>Travels</em></a>. All rights reserved.</p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-bottom-link">Terms &amp; Conditions</a></li>
+          <li><a href="#" class="footer-bottom-link">FAQ</a></li>
+          <li><button class="admin-portal-link" data-admin-login>Admin Portal</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+  <script type="module" src="/src/destinations.js"></script>
+  <script type="module" src="/src/animations.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
