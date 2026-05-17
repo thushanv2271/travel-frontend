@@ -1,9 +1,9 @@
-import { initCurrency }   from './currency.js'
-import { initSearch }     from './search.js'
-import { initAdminLogin } from './admin-login.js'
+import { initCurrency } from './currency.js'
+import { initSearch }   from './search.js'
+import { initUserNav }  from './user-auth.js'
 initCurrency()
 initSearch()
-initAdminLogin()
+initUserNav()
 
 // Navbar toggle
 const overlay = document.querySelector('[data-overlay]')
@@ -13,8 +13,8 @@ const navCloseBtn = document.querySelector('[data-nav-close-btn]')
 const navLinks = document.querySelectorAll('[data-nav-link]')
 
 function toggleNav() {
-  navbar.classList.toggle('active')
-  overlay.classList.toggle('active')
+  navbar?.classList.toggle('active')
+  overlay?.classList.toggle('active')
 }
 
 navOpenBtn?.addEventListener('click', toggleNav)

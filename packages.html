@@ -31,20 +31,21 @@
         </a>
         <div class="header-btn-group">
           <div class="currency-switcher">
-            <select class="currency-select" aria-label="Select currency">
-              <option value="USD">$ USD</option>
-              <option value="LKR">Rs LKR</option>
-              <option value="EUR">€ EUR</option>
-              <option value="GBP">£ GBP</option>
-              <option value="AUD">A$ AUD</option>
-              <option value="CAD">C$ CAD</option>
-              <option value="SGD">S$ SGD</option>
-              <option value="JPY">¥ JPY</option>
-              <option value="INR">₹ INR</option>
-            </select>
+            <button class="currency-btn" aria-label="Select currency">$</button>
+            <ul class="currency-dropdown">
+              <li data-value="USD">$ <span>USD</span></li>
+              <li data-value="LKR">Rs <span>LKR</span></li>
+              <li data-value="EUR">€ <span>EUR</span></li>
+              <li data-value="GBP">£ <span>GBP</span></li>
+              <li data-value="AUD">A$ <span>AUD</span></li>
+              <li data-value="CAD">C$ <span>CAD</span></li>
+              <li data-value="SGD">S$ <span>SGD</span></li>
+              <li data-value="JPY">¥ <span>JPY</span></li>
+              <li data-value="INR">₹ <span>INR</span></li>
+            </ul>
           </div>
           <button class="search-btn" aria-label="Search"><ion-icon name="search"></ion-icon></button>
-          <button class="admin-header-btn" data-admin-login aria-label="Admin Login"><ion-icon name="lock-closed-outline"></ion-icon></button>
+          <div id="user-nav-area" class="user-nav-area"></div>
           <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn><ion-icon name="menu-outline"></ion-icon></button>
         </div>
       </div>
@@ -70,10 +71,6 @@
             <li><a href="index.html#contact" class="navbar-link" data-nav-link>Contact Us</a></li>
           </ul>
         </nav>
-        <button class="btn btn-primary">Book Now</button>
-        <button class="admin-nav-btn" data-admin-login aria-label="Admin Login">
-          <ion-icon name="lock-closed-outline"></ion-icon> Admin
-        </button>
       </div>
     </div>
   </header>
@@ -541,7 +538,6 @@
           <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
           <li><a href="#" class="footer-bottom-link">Terms &amp; Conditions</a></li>
           <li><a href="#" class="footer-bottom-link">FAQ</a></li>
-          <li><button class="admin-portal-link" data-admin-login>Admin Portal</button></li>
         </ul>
       </div>
     </div>

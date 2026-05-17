@@ -34,17 +34,45 @@ async function fetchRates() {
   } catch { /* use fallback rates */ }
 }
 
+function syncButtons() {
+  const sym = SYMBOLS[active] ?? active
+  document.querySelectorAll('.currency-btn').forEach(btn => { btn.textContent = sym })
+  document.querySelectorAll('.currency-dropdown li').forEach(li => {
+    li.classList.toggle('active', li.dataset.value === active)
+  })
+}
+
 function setupWidget() {
-  document.querySelectorAll('.currency-select').forEach(sel => {
-    sel.value = active
-    sel.addEventListener('change', e => {
-      active = e.target.value
-      localStorage.setItem('tsl_currency', active)
-      document.querySelectorAll('.currency-select').forEach(s => { s.value = active })
-      updateAllPrices()
-      document.dispatchEvent(new CustomEvent('currencyChanged', { detail: { currency: active } }))
+  document.querySelectorAll('.currency-switcher').forEach(switcher => {
+    const btn      = switcher.querySelector('.currency-btn')
+    const dropdown = switcher.querySelector('.currency-dropdown')
+    if (!btn || !dropdown) return
+
+    btn.addEventListener('click', e => {
+      e.stopPropagation()
+      const isOpen = !dropdown.classList.contains('hidden')
+      document.querySelectorAll('.currency-dropdown').forEach(d => d.classList.add('hidden'))
+      if (!isOpen) dropdown.classList.remove('hidden')
+    })
+
+    dropdown.querySelectorAll('li').forEach(li => {
+      li.addEventListener('click', () => {
+        active = li.dataset.value
+        localStorage.setItem('tsl_currency', active)
+        dropdown.classList.add('hidden')
+        syncButtons()
+        updateAllPrices()
+        document.dispatchEvent(new CustomEvent('currencyChanged', { detail: { currency: active } }))
+      })
     })
   })
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.currency-dropdown').forEach(d => d.classList.add('hidden'))
+  })
+
+  syncButtons()
+  document.querySelectorAll('.currency-dropdown').forEach(d => d.classList.add('hidden'))
 }
 
 export function getActive()  { return active }
