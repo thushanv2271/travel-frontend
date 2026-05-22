@@ -13,6 +13,7 @@ export default defineConfig({
         login:        resolve(__dirname, 'login.html'),
         register:     resolve(__dirname, 'register.html'),
         about:        resolve(__dirname, 'about.html'),
+        contact:      resolve(__dirname, 'contact.html'),
       }
     }
   }
