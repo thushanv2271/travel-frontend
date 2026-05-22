@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — Tapro Travels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .auth-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+    }
+
+    .auth-logo {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+    .auth-logo em { color: #e8a045; font-style: italic; }
+
+    .auth-subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+
+    .google-btn-wrapper {
+      margin-bottom: 24px;
+      min-height: 44px;
+    }
+    #google-btn-container { width: 100%; }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      color: #aaa;
+      font-size: 13px;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #e8e8e8;
+    }
+
+    .field { margin-bottom: 18px; }
+    .field label { display: block; font-size: 13px; font-weight: 500; color: #444; margin-bottom: 6px; }
+    .field input {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: #222;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .field input:focus { border-color: #e8a045; }
+
+    .error-msg {
+      background: #fff0f0;
+      color: #c0392b;
+      border: 1px solid #f5c6c6;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      margin-bottom: 16px;
+      display: none;
+    }
+    .error-msg.show { display: block; }
+
+    .submit-btn {
+      width: 100%;
+      padding: 13px;
+      background: #e8a045;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 4px;
+    }
+    .submit-btn:hover { background: #d4892e; }
+    .submit-btn:disabled { background: #ccc; cursor: not-allowed; }
+
+    .auth-footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 13px;
+      color: #666;
+    }
+    .auth-footer a { color: #e8a045; font-weight: 500; text-decoration: none; }
+    .auth-footer a:hover { text-decoration: underline; }
+
+    .back-home {
+      display: block;
+      text-align: center;
+      margin-top: 16px;
+      font-size: 13px;
+      color: #999;
+      text-decoration: none;
+    }
+    .back-home:hover { color: #555; }
+  </style>
+</head>
+<body>
+
+  <div class="auth-card">
+    <div class="auth-logo">Tapro <em>Travels</em></div>
+    <p class="auth-subtitle">Create your account to get started.</p>
+
+    <!-- Google rendered button — width set dynamically for responsiveness -->
+    <div class="google-btn-wrapper">
+      <div id="google-btn-container"></div>
+    </div>
+
+    <div class="divider">or register with email</div>
+
+    <div id="error-msg" class="error-msg"></div>
+
+    <form id="register-form">
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" placeholder="John Silva" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="you@example.com" required autocomplete="email" />
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="At least 6 characters" required autocomplete="new-password" minlength="6" />
+      </div>
+      <button type="submit" class="submit-btn" id="submit-btn">Create Account</button>
+    </form>
+
+    <p class="auth-footer">
+      Already have an account? <a href="login.html">Sign in</a>
+    </p>
+    <a href="index.html" class="back-home">← Back to home</a>
+  </div>
+
+  <script>
+    const API = 'http://localhost:5000';
+
+    function initGoogle() {
+      const container = document.getElementById('google-btn-container');
+      const width = Math.min(container.offsetWidth || 340, 400);
+      google.accounts.id.initialize({
+        client_id: '565666368976-0cabv2pe9m5kfmci0jgl3qmparta71od.apps.googleusercontent.com',
+        callback: handleGoogleCredential,
+        auto_select: false,
+      });
+      google.accounts.id.renderButton(container, {
+        type: 'standard', size: 'large', theme: 'outline',
+        text: 'signup_with', shape: 'rectangular', logo_alignment: 'left',
+        width,
+      });
+    }
+
+    function handleGoogleCredential(response) {
+      fetch(`${API}/api/users/google`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ idToken: response.credential })
+      })
+      .then(r => r.json().then(d => ({ ok: r.ok, data: d })))
+      .then(({ ok, data }) => {
+        if (!ok) throw new Error(data.message || 'Google sign-up failed');
+        saveUserAndRedirect(data);
+      })
+      .catch(e => showError(e.message));
+    }
+
+    document.getElementById('register-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Creating account…';
+      try {
+        const res = await fetch(`${API}/api/users/register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
+          })
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.message || 'Registration failed');
+        saveUserAndRedirect(data);
+      } catch (e) {
+        showError(e.message);
+        btn.disabled = false;
+        btn.textContent = 'Create Account';
+      }
+    });
+
+    function saveUserAndRedirect(data) {
+      localStorage.setItem('tt_token', data.token);
+      localStorage.setItem('tt_user', JSON.stringify({ name: data.name, email: data.email, picture: data.picture }));
+      location.href = 'index.html';
+    }
+
+    function showError(msg) {
+      const el = document.getElementById('error-msg');
+      el.textContent = msg;
+      el.classList.add('show');
+    }
+  </script>
+  <script src="https://accounts.google.com/gsi/client" onload="initGoogle()" async defer></script> <!-- NOSONAR -->
+</body>
+</html>

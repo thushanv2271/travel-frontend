@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Tapro Travels</title>
+  <link rel="stylesheet" href="/src/admin/admin.css" />
+</head>
+<body>
+  <div id="admin-app">
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+      <div class="login-card">
+        <div class="login-logo">Tapro <em>Travels</em></div>
+        <h2>Admin Portal</h2>
+        <div id="login-error" class="login-error hidden"></div>
+        <form id="login-form">
+          <div class="field">
+            <label>Username</label>
+            <input type="text" id="login-username" placeholder="admin" required />
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" id="login-password" placeholder="••••••••" required />
+          </div>
+          <button type="submit" id="login-btn" class="btn-primary">Sign In</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Admin Dashboard (hidden until logged in) -->
+    <div id="admin-panel" class="admin-panel hidden">
+      <aside class="sidebar">
+        <div class="sidebar-logo">Tapro <em>Travels</em></div>
+        <nav class="sidebar-nav">
+          <button class="nav-item active" data-page="dashboard">
+            <span class="nav-icon">⊞</span> Dashboard
+          </button>
+          <button class="nav-item" data-page="packages">
+            <span class="nav-icon">📦</span> Packages
+          </button>
+          <button class="nav-item" data-page="destinations">
+            <span class="nav-icon">📍</span> Destinations
+          </button>
+          <button class="nav-item" data-page="bookings">
+            <span class="nav-icon">📅</span> Bookings
+          </button>
+          <button class="nav-item" data-page="inquiries">
+            <span class="nav-icon">✉️</span> Inquiries
+          </button>
+        </nav>
+        <button id="logout-btn" class="logout-btn">Sign Out</button>
+      </aside>
+
+      <main class="main-content">
+        <div id="page-dashboard" class="page active">
+          <h1>Dashboard</h1>
+          <div class="stats-grid" id="stats-grid">
+            <div class="stat-card"><div class="stat-value" id="stat-packages">—</div><div class="stat-label">Packages</div></div>
+            <div class="stat-card"><div class="stat-value" id="stat-destinations">—</div><div class="stat-label">Destinations</div></div>
+            <div class="stat-card"><div class="stat-value" id="stat-bookings">—</div><div class="stat-label">Total Bookings</div></div>
+            <div class="stat-card highlight"><div class="stat-value" id="stat-pending">—</div><div class="stat-label">Pending Bookings</div></div>
+            <div class="stat-card highlight"><div class="stat-value" id="stat-inquiries">—</div><div class="stat-label">Unread Inquiries</div></div>
+          </div>
+        </div>
+
+        <div id="page-packages" class="page">
+          <div class="page-header">
+            <h1>Packages</h1>
+            <button class="btn-primary" id="new-package-btn">+ New Package</button>
+          </div>
+          <div id="packages-table-wrap"></div>
+        </div>
+
+        <div id="page-destinations" class="page">
+          <div class="page-header">
+            <h1>Destinations</h1>
+            <button class="btn-primary" id="new-destination-btn">+ New Destination</button>
+          </div>
+          <div id="destinations-table-wrap"></div>
+        </div>
+
+        <div id="page-bookings" class="page">
+          <div class="page-header"><h1>Bookings</h1></div>
+          <div id="bookings-table-wrap"></div>
+        </div>
+
+        <div id="page-inquiries" class="page">
+          <div class="page-header"><h1>Inquiries</h1></div>
+          <div id="inquiries-table-wrap"></div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+      <div class="modal">
+        <div class="modal-header">
+          <h3 id="modal-title">Form</h3>
+          <button class="modal-close" id="modal-close">✕</button>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/admin/admin.js"></script>
+</body>
+</html>
