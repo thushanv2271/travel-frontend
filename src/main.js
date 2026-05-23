@@ -27,9 +27,15 @@ navLinks.forEach(l => l.addEventListener('click', toggleNav))
 const header   = document.querySelector('[data-header]')
 const goTopBtn = document.querySelector('[data-go-top]')
 
+let _headerTicking = false
 window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY >= 200
-  header?.classList.toggle('active', scrolled)
-  goTopBtn?.classList.toggle('active', scrolled)
-})
+  if (_headerTicking) return
+  _headerTicking = true
+  requestAnimationFrame(() => {
+    const scrolled = window.scrollY >= 200
+    header?.classList.toggle('active', scrolled)
+    goTopBtn?.classList.toggle('active', scrolled)
+    _headerTicking = false
+  })
+}, { passive: true })
 

@@ -27,10 +27,16 @@ function initHeroParallax() {
   const slides = document.querySelectorAll('.hero-slide')
   if (!slides.length) return
 
+  let _last = -1
+  let _ticking = false
   window.addEventListener('scroll', () => {
-    const y = window.scrollY * 0.35
-    slides.forEach(s => {
-      s.style.backgroundPositionY = `calc(50% + ${y}px)`
+    _last = window.scrollY
+    if (_ticking) return
+    _ticking = true
+    requestAnimationFrame(() => {
+      const y = _last * 0.35
+      slides.forEach(s => { s.style.backgroundPositionY = `calc(50% + ${y}px)` })
+      _ticking = false
     })
   }, { passive: true })
 }
@@ -142,9 +148,15 @@ function initScrollProgress() {
   bar.className = 'scroll-progress'
   document.body.prepend(bar)
 
+  let _ticking = false
   window.addEventListener('scroll', () => {
-    const total = document.documentElement.scrollHeight - window.innerHeight
-    bar.style.width = `${(window.scrollY / total) * 100}%`
+    if (_ticking) return
+    _ticking = true
+    requestAnimationFrame(() => {
+      const total = document.documentElement.scrollHeight - window.innerHeight
+      if (total > 0) bar.style.transform = `scaleX(${window.scrollY / total})`
+      _ticking = false
+    })
   }, { passive: true })
 }
 
